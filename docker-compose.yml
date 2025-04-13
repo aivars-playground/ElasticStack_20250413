@@ -1,7 +1,7 @@
 services:
   elasticsearch:
     container_name: elasticsearch
-    image: elasticsearch:7.8.1
+    image: elasticsearch:7.17.28
     environment:
       - discovery.type=single-node
       - xpack.security.enabled=true
@@ -13,7 +13,7 @@ services:
 
   kibana:
     container_name: kibana
-    image: kibana:7.8.1
+    image: kibana:7.17.28
     environment:
       - ELASTICSEARCH_HOSTS=http://elasticsearch:9200
       - ELASTICSEARCH_USERNAME=elastic
